@@ -1,0 +1,18 @@
+.header {
+  background-color: #000;
+  height: 100vh;
+}
+.my-name {
+  top: 30%;
+  left: 10%;
+}
+.my-p {
+  top: 40%;
+  left: 10%;
+  font-size: 28px;
+}
+.btn {
+  top: 55% !important;
+  left: 10% !important;
+  font-size: 28px !important;
+}
