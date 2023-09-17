@@ -19,58 +19,15 @@
         <p class="text-light fs-3">Web Design</p>
         <p class="text-light fs-3">Mobile App Design</p>
       </div>
-      <div class="col-xl-7 col-lg-6 pt-5">
-        <div class="progress mb-4">
+      <div class="col-xl-7 col-lg-7 pt-5">
+        <div class="progress mb-4" *ngFor="let skill of skills">
+          <span class="ps-2 me-2">{{ skill.name }}</span>
           <div
-            class="progress-bar"
+            class="progress-bar ms-3"
             role="progressbar"
             aria-label="Basic example"
             aria-valuenow="0"
-            style="width: 80%"
-            aria-valuemin="0"
-            aria-valuemax="100"
-          ></div>
-        </div>
-        <div class="progress mb-4">
-          <div
-            class="progress-bar"
-            role="progressbar"
-            aria-label="Basic example"
-            style="width: 90%"
-            aria-valuenow="25"
-            aria-valuemin="0"
-            aria-valuemax="100"
-          ></div>
-        </div>
-        <div class="progress mb-4">
-          <div
-            class="progress-bar"
-            role="progressbar"
-            aria-label="Basic example"
-            style="width: 90%"
-            aria-valuenow="50"
-            aria-valuemin="0"
-            aria-valuemax="100"
-          ></div>
-        </div>
-        <div class="progress mb-4">
-          <div
-            class="progress-bar"
-            role="progressbar"
-            aria-label="Basic example"
-            style="width: 85%"
-            aria-valuenow="75"
-            aria-valuemin="0"
-            aria-valuemax="100"
-          ></div>
-        </div>
-        <div class="progress mb-4">
-          <div
-            class="progress-bar"
-            role="progressbar"
-            aria-label="Basic example"
-            style="width: 100%"
-            aria-valuenow="100"
+            [style.width.%]="skill.level"
             aria-valuemin="0"
             aria-valuemax="100"
           ></div>

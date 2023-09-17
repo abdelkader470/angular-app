@@ -4,57 +4,16 @@
       <h1>Portfolio</h1>
     </div>
     <div class="row row-cols-1 row-cols-md-3 g-4">
-      <div class="col">
-        <div class="card odd">
+      <div class="col" *ngFor="let card of cards; let odd = odd">
+        <div
+          class="card"
+          [style.background-color]="odd ? 'lightgray' : 'rgb(44, 44, 44)'"
+          [style.color]="odd ? '' : 'white'"
+        >
           <div
             class="card-body d-flex justify-content-center align-items-center"
           >
-            <h5 class="card-title">Web design</h5>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card even">
-          <div
-            class="card-body d-flex justify-content-center align-items-center"
-          >
-            <h5 class="card-title">Mobile design</h5>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card odd">
-          <div
-            class="card-body d-flex justify-content-center align-items-center"
-          >
-            <h5 class="card-title">LOGO design</h5>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card even">
-          <div
-            class="card-body d-flex justify-content-center align-items-center"
-          >
-            <h5 class="card-title">Web Application</h5>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card odd">
-          <div
-            class="card-body d-flex justify-content-center align-items-center"
-          >
-            <h5 class="card-title">Mobile Application</h5>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card even">
-          <div
-            class="card-body d-flex justify-content-center align-items-center"
-          >
-            <h5 class="card-title">PWA Develepment</h5>
+            <h5 class="card-title">{{ card.title }}</h5>
           </div>
         </div>
       </div>
