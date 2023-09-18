@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { UsersComponent } from './users/users.component';
 import { FormsModule } from '@angular/forms';
+import { UserCardComponent } from './user-card/user-card.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     DataBindingComponent,
     UsersComponent,
+    UserCardComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],

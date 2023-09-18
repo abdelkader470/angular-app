@@ -6,13 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./users.component.css'],
 })
 export class UsersComponent {
-  users = [
+  users: Array<any> = [
     {
       profilePic: '../../assets/av1.jpg',
       userName: 'Ahmed',
       email: 'ahmed@gmail.com',
       phone: '0101246565',
       isVerified: true,
+      brithData: new Date(1999, 18, 9),
     },
     {
       profilePic: '../../assets/av2.png',
@@ -20,6 +21,7 @@ export class UsersComponent {
       email: 'Ali@gmail.com',
       phone: '0101288565',
       isVerified: false,
+      brithData: new Date(1998, 5, 9),
     },
     {
       profilePic: '../../assets/av3.png',
@@ -27,6 +29,7 @@ export class UsersComponent {
       email: 'Amr@gmail.com',
       phone: '0101246565',
       isVerified: true,
+      brithData: new Date(1992, 3, 6),
     },
     {
       profilePic: '../../assets/av4.png',
@@ -34,6 +37,7 @@ export class UsersComponent {
       email: 'omar@gmail.com',
       phone: '0101246565',
       isVerified: false,
+      brithData: new Date(1993, 10, 10),
     },
     {
       profilePic: '../../assets/av5.png',
@@ -41,6 +45,7 @@ export class UsersComponent {
       email: 'Abdo@gmail.com',
       phone: '0101246565',
       isVerified: true,
+      brithData: new Date(1995, 7, 3),
     },
     {
       profilePic: '../../assets/av2.png',
@@ -48,15 +53,21 @@ export class UsersComponent {
       email: 'Mohamed@gmail.com',
       phone: '0101246565',
       isVerified: true,
+      brithData: new Date(2000, 6, 4),
     },
   ];
-  searchQuery = ''; // Variable to store the search query
+  search = ''; // Variable to store the search query
 
   // Function to filter users by email
   filterUsersByEmail(): any[] {
-    const query = this.searchQuery.toLowerCase();
+    const userSearch = this.search.toLowerCase();
     return this.users.filter((user) =>
-      user.email.toLowerCase().includes(query)
+      user.email.toLowerCase().includes(userSearch)
     );
+  }
+  clickedUserName!: string;
+  receivedName(userName: string) {
+    console.log(userName);
+    this.clickedUserName = userName;
   }
 }

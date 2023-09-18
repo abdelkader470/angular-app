@@ -1,0 +1,24 @@
+<img
+  [src]="userItem.profilePic"
+  class="card-img-top rounded-circle w-25 m-auto"
+  alt=""
+/>
+<i
+  class="m-auto mt-2"
+  [class]="userItem.isVerified ? 'fa-solid fa-star' : 'fa-regular fa-star'"
+></i>
+<div class="card-body">
+  <p class="card-title fw-bold">
+    UserName: <span class="fw-medium">{{ userItem.userName }}</span>
+  </p>
+  <p class="fw-bold">
+    Email:
+    <a href="#" class="fw-medium text-decoration-none text-black">{{
+      userItem.email
+    }}</a>
+  </p>
+  <p class="card-text fw-bold">
+    Phone: <span class="fw-medium">{{ userItem.phone }}</span>
+  </p>
+  <div class="btn btn-dark" (click)="sendName(userItem.userName)">Get Name</div>
+</div>
